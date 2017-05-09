@@ -21,7 +21,7 @@ gulp.task("connect",function(){
 })
 
 gulp.task("es6", function () {
-    browserify("./src/app.js")
+    browserify("./src/app.js",{debug:true})
     .transform(babelify,{presets: ["es2015"]})
     .bundle()
     .pipe(source("all.js"))
